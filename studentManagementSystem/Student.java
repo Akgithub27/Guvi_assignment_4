@@ -45,6 +45,7 @@ public class Student {
         this.course = course;
     }
 
+    //checking age is within range
     public void checkAge() throws AgeNotWithinRangeException {
         if(this.age< 15 || this.age>21){
             throw new AgeNotWithinRangeException();
@@ -53,6 +54,7 @@ public class Student {
         }
     }
 
+    //checking if name contains special characters
     public void checkName() throws NameNotValidException{
         if(!this.name.matches("[a-zA-Z]+")){
             throw new NameNotValidException();
